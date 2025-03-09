@@ -1,1 +1,44 @@
 @import 'tailwindcss';
+
+@theme {
+  --animate-fade-in-up: fade-in-up 0.4s ease-out;
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-fade-in-down: fade-in-down 0.4s ease-out;
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer components {
+  .input-field {
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid oklch(0.928 0.006 264.531);
+    background-color: #F8FAFC;
+    padding-left: 12px;
+    outline-color: transparent;
+    transition: all 150ms linear;
+    &:focus {
+      border: 1px solid oklch(0.746 0.16 232.661);
+      outline-offset: 4px;
+      outline-color: oklch(0.746 0.16 232.661);
+    }
+  }
+}
