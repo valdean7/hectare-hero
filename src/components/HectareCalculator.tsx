@@ -75,7 +75,7 @@ const HectareCalculator: React.FC<HectareCalculatorProps> = ({ onAddPricing }) =
 
   return (
     <div className="max-w-[450px] rounded-md bg-white p-7 shadow-lg">
-      <form onSubmit={handleSubmit(formValid)} className="flex flex-col gap-4">
+      <form role="form" onSubmit={handleSubmit(formValid)} className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <label htmlFor="name">Nome</label>
           <input
