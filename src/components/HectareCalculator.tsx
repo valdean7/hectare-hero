@@ -1,4 +1,4 @@
-import React from 'react';
+import { Dispatch, SetStateAction, FC } from 'react';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -37,10 +37,10 @@ const HectareCalculatorSchema = z.object({
 type HectareCalculatorFormData = z.infer<typeof HectareCalculatorSchema>;
 
 type HectareCalculatorProps = {
-  onAddPricing: React.Dispatch<React.SetStateAction<HectarePricing[]>>;
+  onAddPricing: Dispatch<SetStateAction<HectarePricing[]>>;
 };
 
-const HectareCalculator: React.FC<HectareCalculatorProps> = ({ onAddPricing }) => {
+const HectareCalculator: FC<HectareCalculatorProps> = ({ onAddPricing }) => {
   const {
     handleSubmit,
     register,

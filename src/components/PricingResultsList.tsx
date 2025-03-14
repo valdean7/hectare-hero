@@ -1,14 +1,14 @@
-import React, { SetStateAction } from 'react';
+import { SetStateAction, Dispatch, FC } from 'react';
 import { FileDown, Ruler, DollarSign, Eraser } from 'lucide-react';
 import { HectarePricing } from '../types/hectare';
 import { generatePricingPDF } from '../utils/generate-pdf';
 
 type PricingResultsListProps = {
   hectareData: HectarePricing[];
-  onRemovePricing: React.Dispatch<SetStateAction<HectarePricing[]>>;
+  onRemovePricing: Dispatch<SetStateAction<HectarePricing[]>>;
 };
 
-const PricingResultsList: React.FC<PricingResultsListProps> = ({ hectareData, onRemovePricing }) => {
+const PricingResultsList: FC<PricingResultsListProps> = ({ hectareData, onRemovePricing }) => {
   const handleRemove = (id: string) => {
     onRemovePricing((prev) => prev.filter((item) => item.id !== id));
   };

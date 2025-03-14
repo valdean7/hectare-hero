@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, beforeEach, vi } from 'vitest';
-import userEvent from '@testing-library/user-event';
+import { userEvent } from '@testing-library/user-event';
 import { Screen } from '@testing-library/react';
 import App from './App';
 import PricingResultsList from './components/PricingResultsList';
