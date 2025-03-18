@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/hectare-hero" element={<App />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

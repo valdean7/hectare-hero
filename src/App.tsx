@@ -39,7 +39,7 @@ const App = () => {
         </main>
         <footer className="px-4 py-6 text-center sm:px-6 lg:px-8">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Hectare Hero Pricer. Todos os direitos reservados.
+            © {new Date().getFullYear()} Hectare Hero. Todos os direitos reservados.
           </p>
         </footer>
       </div>

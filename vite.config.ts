@@ -8,4 +8,5 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 700,
   },
+  base: '/hectare-hero',
 });
